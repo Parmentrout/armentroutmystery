@@ -27,3 +27,7 @@
 .custom-title {
   font-size: 20px;
 }
+
+.quasar-image {
+  max-width: 350px !important;
+}
