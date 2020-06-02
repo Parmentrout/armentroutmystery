@@ -2,6 +2,10 @@
   max-height: 50px;
 }
 
+.locked-in-img {
+  max-height: 250px;
+}
+
 .how-to {
   padding-top: 5%;
   padding-bottom: 5%;
@@ -26,8 +30,4 @@
 
 .custom-title {
   font-size: 20px;
-}
-
-.quasar-image {
-  max-width: 350px !important;
 }
