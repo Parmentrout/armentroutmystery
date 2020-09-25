@@ -31,3 +31,14 @@
 .custom-title {
   font-size: 20px;
 }
+
+.spooky-jumbo {
+  background: black !important;
+  color: orange;
+}
+
+.spooky-button {
+  color: orange !important;
+  border-color: orange !important;
+  background-color: black !important;
+}
