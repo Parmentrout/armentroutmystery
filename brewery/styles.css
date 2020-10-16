@@ -19,6 +19,9 @@ body{
 }
 
 .the-number {
-  font-size: 4em;
-  margin-top: 45px;
+  font-size: 3em;
+    /* margin-top: 45px; */
+}
+.width-124 {
+  max-width: 124.5px;
 }
