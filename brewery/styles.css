@@ -17,3 +17,8 @@ body{
 .modal {
   color: black;
 }
+
+.the-number {
+  font-size: 4em;
+  margin-top: 45px;
+}

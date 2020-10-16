@@ -1,3 +1,36 @@
+const answer1 = new SlotMachine(document.querySelector('#clue1'), {
+    active: 0,
+    auto: false
+  });
+  const answer2 = new SlotMachine(document.querySelector('#clue2'), {
+    active: 0,
+    auto: false
+  });
+  const answer3 = new SlotMachine(document.querySelector('#clue3'), {
+    active: 0,
+    auto: false
+  });
+  const answer4 = new SlotMachine(document.querySelector('#clue4'), {
+    active: 0,
+    auto: false
+  });
+  const answer5 = new SlotMachine(document.querySelector('#clue5'), {
+    active: 0,
+    auto: false
+  });
+  const answer6 = new SlotMachine(document.querySelector('#clue6'), {
+    active: 0,
+    auto: false
+  });
+  const answer7 = new SlotMachine(document.querySelector('#clue6'), {
+    active: 0,
+    auto: false
+  });
+  const answer8 = new SlotMachine(document.querySelector('#clue6'), {
+    active: 0,
+    auto: false
+  });
+
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
   IdentityPoolId: 'us-east-1:687b1ef2-20a7-4a7b-908a-e23815ac0c87'
