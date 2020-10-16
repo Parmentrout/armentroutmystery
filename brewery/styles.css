@@ -13,3 +13,7 @@ body{
 .nav-icon {
   max-height: 50px;
 }
+
+.modal {
+  color: black;
+}

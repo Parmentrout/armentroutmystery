@@ -10,6 +10,7 @@
         <link href="./styles.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0ac34bea25.js" crossorigin="anonymous"></script>        
         <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
     </head>
     <body>
         <nav class="navbar">
@@ -26,15 +27,83 @@
          </nav>
         <div class="container mt-4 mb-4">
             <div class="row">
-                <div class="col text-center"><i class="fas fa-border fa-waveform-path fa-5x"></i></div>
-                <div class="col text-center"><i class="fas fa-border fa-redo-alt fa-5x"></i></div>
-                <div class="col text-center"><i class="fas fa-border fa-hat-wizard fa-5x"></i></div>
+                <div id="topbutton1" class="col text-center"><i class="fas fa-border fa-waveform-path fa-5x"></i></div>
+                <div id="topbutton2" class="col text-center"><i class="fas fa-border fa-redo-alt fa-5x"></i></div>
+                <div id="topbutton3" class="col text-center"><i class="fas fa-border fa-hat-wizard fa-5x"></i></div>
             </div>
         </div>
         <hr>
         <div class="container mt-4">
             <div class="col"></div>
         </div>
+
+        <!-- Here be shitloads of modals -->
+
+        <div id="emailModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header"><h4 class="modal-title">Login to get started!</h4></div>
+                <div class="modal-body">
+                  <h5>Thank you for playing the greatest (I'm biased) escape room of 2020!  Please input your email and affiliated company below:
+                  </h5>
+                  <hr>
+                  <form id="loginForm" class="mt-2" onsubmit="return false;">
+                    <div class="form-group">
+                      <label for="email">Email address:</label>
+                      <input id="emailInput" type="email" class="form-control" placeholder="Enter email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="company">Company:</label>
+                      <input id="companyInput" type="text" class="form-control" placeholder="Enter company name if this is a team event" id="company">
+                    </div>
+                    <div class="form-group form-check">
+                      <label class="form-check-label">
+                        <input id="optInInput" class="form-check-input" type="checkbox" checked> I would like to receive updates about exciting new escape rooms
+                      </label>
+                    </div>
+                    <button id="sessionSubmit" type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!--  here -->
+          <div id="morse1modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                    <audio src="brewery_morse1.wav" controls>
+                        Your browser does not support the
+                        <code>audio</code> element.
+                      </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="morse2modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                    <audio src="brewery_morse2.wav" controls>
+                        Your browser does not support the
+                        <code>audio</code> element.
+                      </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="morse3modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="Wizard-GIF.gif" class="img img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
