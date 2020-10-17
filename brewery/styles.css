@@ -22,6 +22,15 @@ body{
   font-size: 3em;
     /* margin-top: 45px; */
 }
-.width-124 {
-  max-width: 124.5px;
+#map {
+  height: 100%;
+}
+
+.map-height { 
+  height: 400px;
+}
+
+.ppv-height {
+  height:50px;
+  margin-top: -20px;
 }

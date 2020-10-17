@@ -1,35 +1,11 @@
-const answer1 = new SlotMachine(document.querySelector('#clue1'), {
-    active: 0,
-    auto: false
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 51.4817, lng: -0.6136 },
+    zoom: 14,
   });
-  const answer2 = new SlotMachine(document.querySelector('#clue2'), {
-    active: 0,
-    auto: false
-  });
-  const answer3 = new SlotMachine(document.querySelector('#clue3'), {
-    active: 0,
-    auto: false
-  });
-  const answer4 = new SlotMachine(document.querySelector('#clue4'), {
-    active: 0,
-    auto: false
-  });
-  const answer5 = new SlotMachine(document.querySelector('#clue5'), {
-    active: 0,
-    auto: false
-  });
-  const answer6 = new SlotMachine(document.querySelector('#clue6'), {
-    active: 0,
-    auto: false
-  });
-  const answer7 = new SlotMachine(document.querySelector('#clue6'), {
-    active: 0,
-    auto: false
-  });
-  const answer8 = new SlotMachine(document.querySelector('#clue6'), {
-    active: 0,
-    auto: false
-  });
+}
 
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -62,12 +38,26 @@ $(() => {
       $('#emailModal').modal({backdrop: 'static', keyboard: false});
 
     }
+
     $('#topbutton1').click( e => $('#morse1modal').modal());
-    $('#topbutton2').click( e => $('#morse2modal').modal());
-    $('#topbutton3').click( e => $('#morse3modal').modal());
+    $('#topbutton2').click( e => $('#hobnobModal').modal());
+    $('#topbutton3').click( e => $('#morse2modal').modal());
+    $('#topbutton4').click( e => $('#drunkWizardModal').modal());
+    $('#topbutton5').click( e => $('#mappingModal').modal());
+    $('#final-form').click(e => {
+      let password = $(`#final-code`).first().val().toLowerCase();
+
+      if (password === '36127845') {
+        $('#codex').hide();
+        $('#secret-recipe').show();
+      } else {
+        $('#formError').show();
+      }
+    });
 
     function hideErrors() {
-
+      $('#formError').hide();
+      $('#secret-recipe').hide();
     }
 
     function saveData(event) {
