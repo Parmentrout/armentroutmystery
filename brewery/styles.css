@@ -34,3 +34,8 @@ body{
   height:50px;
   margin-top: -20px;
 }
+
+.journal {
+  border-width: 6px !important;
+  padding: 15px !important;
+}
