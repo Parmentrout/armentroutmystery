@@ -47,6 +47,7 @@ $(() => {
     $('#final-form').click(e => {
       let password = $(`#final-code`).first().val().toLowerCase();
 
+      // If you are reading this, I'm not mad, just disappointed
       if (password === '36127845') {
         $('#codex').hide();
         $('#secret-recipe').show();
