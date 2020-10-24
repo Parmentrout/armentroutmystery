@@ -1,0 +1,5 @@
+- False morse code is too long
+- Add hints section
+    - A hint for each big thing to unlock
+- bug in timing
+- Replace wizard picture
