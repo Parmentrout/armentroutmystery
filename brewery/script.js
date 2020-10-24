@@ -47,15 +47,30 @@ $(() => {
     $('#final-form').click(e => {
       let password = $(`#final-code`).first().val().toLowerCase();
 
-      // If you are reading this, I'm not mad, just disappointed
-      if (password === '36127845') {
-        $('#codex').hide();
-        $('#secret-recipe').show();
-      } else {
-        $('#formError').show();
-      }
-    });
+        // If you are reading this, I'm not mad, just disappointed
+        if (password === '36127845') {
+          saveData('Codex completed');
+          $('#codex').hide();
+          $('#secret-recipe').show();
+        } else {
+          saveData(`Incorrect Codex code: ${password}`);
+          $('#formError').show();
+        }
+      });
 
+      $('#secret-ingredient-form').click(e => {
+        let password = $(`#secret-ingredient`).first().val().toLowerCase();
+
+        // If you are reading this, I'm not mad, just disappointed
+        if (password === 'lemon') {
+          saveData('stop');
+          $('#successModal').modal();
+        } else {
+          saveData(`Incorrect secret ingredient: ${password}`);
+          $('#secretError').show();
+        }
+    });
+    
     function hideErrors() {
       $('#formError').hide();
       $('#secret-recipe').hide();
