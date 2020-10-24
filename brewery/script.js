@@ -39,11 +39,29 @@ $(() => {
 
     }
 
-    $('#topbutton1').click( e => $('#morse1modal').modal());
-    $('#topbutton2').click( e => $('#hobnobModal').modal());
-    $('#topbutton3').click( e => $('#morse2modal').modal());
-    $('#topbutton4').click( e => $('#drunkWizardModal').modal());
-    $('#topbutton5').click( e => $('#mappingModal').modal());
+    $('#topbutton1').click( e => {
+      saveData('Fake morse opened');
+      $('#morse1modal').modal();
+    });
+    $('#topbutton2').click( e => {
+      saveData('Hobnob opened');
+      $('#hobnobModal').modal()
+    });
+    $('#topbutton3').click( e => {
+      saveData('Narwhal morse opened');
+      $('#morse2modal').modal()
+    });
+    $('#topbutton4').click( e => {
+      saveData('Drunk wizard opened');
+      $('#drunkWizardModal').modal();
+    });
+    $('#topbutton5').click( e => {
+      saveData('Map opened');
+      $('#mappingModal').modal();
+    });
+    $('#helpModal').on('show.bs.modal', function () {
+      saveData('Help modal opened');
+    });
     $('#final-form').click(e => {
       let password = $(`#final-code`).first().val().toLowerCase();
 
@@ -70,7 +88,7 @@ $(() => {
           $('#secretError').show();
         }
     });
-    
+
     function hideErrors() {
       $('#formError').hide();
       $('#secret-recipe').hide();
