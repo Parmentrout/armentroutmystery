@@ -40,10 +40,13 @@ body{
   padding: 15px !important;
 }
 
-#topbutton3 {
+.pointer {
   cursor: pointer;
 }
 
+.wizard-image {
+  max-height: 400px;
+}
 
 .confetti {
   width: 15px;
