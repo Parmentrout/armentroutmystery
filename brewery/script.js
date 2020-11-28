@@ -17,7 +17,7 @@ const params = {
   TableName: "mystery-results",
   Item: event
 };
-const sessionKey = 'lockedInMystery';
+const sessionKey = 'caseMissingRecipe';
 $(() => {
     hideErrors();
 
@@ -66,7 +66,7 @@ $(() => {
       let password = $(`#final-code`).first().val().toLowerCase();
 
         // If you are reading this, I'm not mad, just disappointed
-        if (password === '36127845') {
+        if (password === '36145') {
           saveData('Codex completed');
           $('#codex').hide();
           $('#secret-recipe').show();
@@ -96,6 +96,7 @@ $(() => {
 
     function saveData(event) {
         const payload = `{
+          "puzzle": "${sessionKey}",
           "email": "${sessionData.email}",
           "company": "${sessionData.company}",
           "optIn": ${sessionData.optIn},
@@ -104,7 +105,7 @@ $(() => {
         }`;
         
         var params = {
-          FunctionName: 'mystery-results-put', // the lambda function we are going to invoke
+          FunctionName: 'mystery-results-v2-put', // the lambda function we are going to invoke
           InvocationType: 'RequestResponse',
           Payload: payload
         };
